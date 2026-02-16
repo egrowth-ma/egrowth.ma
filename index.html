@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eGrowth — Ads Management Agency | Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">eGrowth</a>
+    <nav class="nav">
+      <a href="#intro">Intro</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-header">Get in Touch</a>
+    </nav>
+    <button type="button" class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="intro" class="hero">
+      <div class="hero-bg">
+        <div class="glow glow-left"></div>
+        <div class="glow glow-right"></div>
+        <div class="orb" aria-hidden="true"></div>
+      </div>
+      <div class="hero-content">
+        <span class="badge">Ads Management & Performance Marketing</span>
+        <h1 class="hero-title">
+          <span class="text-white">Something great is</span>
+          <span class="text-gradient">Coming Soon</span>
+        </h1>
+        <p class="hero-subtitle">
+          We're building a full-service ads management agency to help brands scale with data-driven campaigns.
+        </p>
+        <p class="hero-desc">
+          Paid media, creative strategy, and analytics — all in one place. Stay tuned.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Notify Me</a>
+          <a href="mailto:hello@egrowth.ma" class="btn btn-secondary">Email Us</a>
+        </div>
+      </div>
+      <p class="scroll-hint">Scroll to discover</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <h2 class="contact-title">Get notified when we launch</h2>
+        <p class="contact-desc">Leave your email and we'll reach out as soon as we're live.</p>
+        <form class="contact-form" action="#" method="post">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit" class="btn btn-primary">Notify Me</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> eGrowth. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var menuToggle = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.nav');
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open');
+        document.body.classList.toggle('menu-open');
+      });
+    }
+  </script>
+</body>
+</html>
